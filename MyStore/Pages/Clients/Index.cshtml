@@ -1,0 +1,38 @@
+﻿@page
+@model MyStore.Pages.Clients.IndexModel
+@{
+	ViewData["Title"] = "Clientes";
+}
+	<br>
+	<h2>Lista de Clientes</h2>
+	<a class= 'btn btn-primary btn-sm' href='/Clients/Create'>Nuevo Cliente</a>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Email</th>
+				<th>Telefono</th>
+				<th>Dirección</th>
+				<th>Creado en</th>
+				<th>Acción</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach(var item in Model.ListClients)
+			{
+				<tr>
+					<td>@item.id</td>
+					<td>@item.name</td>
+					<td>@item.email</td>
+					<td>@item.phone</td>
+					<td>@item.address</td>
+					<td>@item.created_at</td>
+					<td>
+						<a class="btn btn-primary btn-sm" href="/Clients/Edit?id=">Editar</a>
+						<a class="btn btn-primary btn-sm" href="/Clients/Delete?id=">Borrar</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>

@@ -17,6 +17,51 @@ html {
   min-height: 100%;
 }
 
+nav {
+    background-color: rgb(200,100,255) !important;
+    font-weight: bold;
+}
 body {
   margin-bottom: 60px;
+  background-color: rgb(240, 225, 255);
+}
+
+a[class="btn btn-primary btn-sm"] {
+    background-color: rgb(200, 100, 255) !important;
+    border-color: rgb(200, 100, 255) !important;
+}
+
+a[class="btn btn-outline-primary"] {
+    border-color: rgb(200,100,255);
+    color: rgb(200,100,255);
+}
+
+a[class="btn btn-outline-primary"]:hover {
+    background-color: rgb(200, 100, 255);
+    border-color: rgb(200,100,255);
+    color: white
+}
+
+button {
+    background-color: rgb(200, 100, 255) !important;
+    border-color: rgb(200, 100, 255) !important;
+}
+
+
+button:hover {
+    background-color: rgb(190, 90, 245) !important;
+    border-color: rgb(190, 90, 245) !important;
+}
+
+td {
+    border: 1px solid rgb(200,100,255);
+}
+input[type="text"] {
+    background-color: rgb(240, 180, 255);
+}
+
+input[type="text"]:focus {
+    background-color: rgb(240,150,255) !important;
+    border-color: rgb(240,180,255) !important;
+    outline: 2px solid white !important;
 }
