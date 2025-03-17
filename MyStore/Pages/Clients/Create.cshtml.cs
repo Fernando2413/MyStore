@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MyStore.Pages.Clients
@@ -28,7 +28,7 @@ namespace MyStore.Pages.Clients
 			}
 			try
 			{
-                string connectionString = "Data Source =.\\sqlexpress; Initial Catalog = mystore; Integrated Security = True;";
+                string connectionString = "Data Source=.\\sqlexpress;Initial Catalog=mystore;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
